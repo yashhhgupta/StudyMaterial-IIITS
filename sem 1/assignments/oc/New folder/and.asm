@@ -1,0 +1,12 @@
+CODE SEGMENT
+     ASSUME CS: CODE
+
+START:  MOV AX,2000H
+        MOV DS,AX
+        MOV AX,0000H
+        MOV [500H],0AFH
+        MOV AL,[500H]
+        MOV BH,0FH
+        AND AL,BH
+
+STOP:   HLT

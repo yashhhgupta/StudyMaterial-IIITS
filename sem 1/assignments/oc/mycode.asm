@@ -1,0 +1,9 @@
+CODE SEGMENT
+    ASSUME CS: CODE
+START:
+        MOV CL,1
+        SUB CL,65H
+        NEG CL
+        ADD CL,86H
+        SBB CL,33H
+STOP: HLT

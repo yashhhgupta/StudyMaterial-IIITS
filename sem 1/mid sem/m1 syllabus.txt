@@ -1,0 +1,10 @@
+1. Counting: Sum and Product Rule, Inclusion and Exclusion Principles, Pigeonhole Principle, Generalized Pigeonhole Principle, Permutation,
+ Combination, Recurrence Relation, Solving Homogeneous and Non-Homogeneous Recurrence Relations, Binomial Coefficients and Identities 
+2. Set: Basic set operations, Mapping of finite and infinite sets, theorem related to mapping, Countable and uncountable sets, 
+theorem related to countability of infinite sets,
+ Sequence & sums.
+
+3. Mathematical Logic: Propositions, Predicates and Quantifiers, Logical Statements, Equivalence of Statements, Converse,
+ Contrapositive and Inverse Statements, Tautology and Contradiction, Mathematical Inference, Various Proof Strategies, Disprove, Normal Forms
+
+4. Induction and Recursion: Principle of Induction, Strong induction, Recursive algorithms, recursive definition of sets, structural induction.
