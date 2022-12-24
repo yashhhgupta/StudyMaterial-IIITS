@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FFSD lab</title>
+</head>
+
+<body>
+    <h5>Enter the value to be sorted</h5>
+    <form action="" id="inputform">
+        <label for="html">Sorting Order</label>
+        <select id="order" required>
+            <option value="asc">Ascending</option>
+            <option value="desc">Descending</option>
+        </select>
+        <br />
+        <label for="html">Sorting Way</label>
+        <select id="way" required>
+            <option value="S">Selection Sort</option>
+            <option value="Q">Quick Sort</option>
+        </select>
+        <br />
+        <label for="html">Input Type</label>
+        <select id="type" required>
+            <option value="number">Number</option>
+            <option value="word">Word</option>
+        </select>
+        <br />
+        <label for="html">Input</label>
+        <input type="text" placeholder="1,2,3,4" name="" id="input" required>
+        <br />
+        <input type="button" value="submit" id="submit">
+        <br />
+    </form>
+    <div id="ans"></div>
+    <h5>Enter the string from which you want to remove stop words</h5>
+    <textarea id="text3a" cols="30" rows="10"></textarea>
+    <br>
+    <br>
+    <button id="button3a">Submit</button>
+    <br>
+    <br>
+    <textarea id="output3a" cols="30" rows="10"></textarea>
+    <h5>Enter the string in which word frequency you want to know</h5>
+
+    <textarea name="stext" id="stext" cols="30" rows="10"></textarea>
+    <button onclick="wordFrequencyCounter()">Submit</button>
+
+    <h3 id="result"></h3>
+    <script src="S20200010234_script.js"></script>
+</body>
+
+</html>

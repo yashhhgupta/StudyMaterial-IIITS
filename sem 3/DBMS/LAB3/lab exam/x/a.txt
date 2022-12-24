@@ -1,0 +1,18 @@
+Create table customer (customer_name char(20),customer_street char(30),customer_city
+char(30),dob DATE,PRIMARY KEY(customer_name));
+Create table branch (branch_name char(15),branch_city char(30),assets
+numeric(16,2),PRIMARY KEY(branch_name));
+Create table account (account_number char(15),branch_name char (15),balance
+numeric(12,2),PRIMARY KEY(account_number),FOREIGN KEY (branch_name)
+REFERENCES branch(branch_name));
+Create table depositor(customer_name char(20),account_number char(10),PRIMARY
+KEY(customer_name,account_number),FOREIGN KEY (customer_name)
+REFERENCES customer(customer_name),FOREIGN KEY (account_number)
+REFERENCES account(account_number));
+Create table loan(loan_number varchar(6),branch_name char(15),amount int,PRIMARY
+KEY(loan_number),FOREIGN KEY (branch_name) REFERENCES
+branch(branch_name));
+Create table borrower(customer_name char(20),loan_number varchar(6),PRIMARY
+KEY(customer_name,loan_number),FOREIGN KEY (customer_name) REFERENCES
+customer(customer_name),FOREIGN KEY (loan_number) REFERENCES
+loan(loan_number));

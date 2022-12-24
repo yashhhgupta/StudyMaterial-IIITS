@@ -1,0 +1,27 @@
+Create table branch (branch_name char(15),branch_city char(30),assets numeric(16,2),PRIMARY KEY(branch_name));
+Create table account (account_number char(15),branch_name char (15),balance numeric(12,2),PRIMARY KEY(account_number),FOREIGN KEY (branch_name) REFERENCES branch(branch_name));
+
+Create table customer (customer_id char(15), customer_name char(20),customer_street char(30),customer_city char(30), account_number char(15), dob date, PRIMARY KEY(customer_id), FOREIGN KEY(account_number) REFERENCES account(account_number));
+Create table depositor(customer_id char(15),account_number char(10),PRIMARY KEY(customer_id,account_number),FOREIGN KEY (customer_id) REFERENCES customer(customer_id),FOREIGN KEY (account_number) REFERENCES account(account_number));
+Create table loan(loan_number varchar(6),branch_name char(15),amount int,PRIMARY KEY(loan_number),FOREIGN KEY (branch_name) REFERENCES branch(branch_name));
+Create table borrower(customer_id char(15),loan_number varchar(6),PRIMARY KEY(customer_id,loan_number),FOREIGN KEY (customer_id) REFERENCES customer(customer_id),FOREIGN KEY (loan_number) REFERENCES loan(loan_number));
+CREATE Table student_s20200010193 (stu_id int,stu_name varchar(20),stu_dept varchar(20), dob date, Course1 int, Course2 int, Course3 int, Course4 int, PRIMARY KEY(stu_id));
+
+DELIMITER //
+Create Function update_name()
+RETURNS INT
+DETERMINISTIC
+BEGIN
+update customer set customer_name ="S20200010234" where customer_id="019-28-3746";
+update depositor set customer_name ="S20200010234" where customer_id="019-28-3746";
+update borrower set customer_name ="S20200010234" where customer_id="019-28-3746";
+return 1;
+END//
+DELIMITER $$
+mysql> Create Function update_names()
+    -> RETURNS INT
+    -> DETERMINISTIC
+    -> BEGIN
+    ->     UPDATE customer SET customer_name="S20200010234" WHERE customer_name ="Smith";
+    -> RETURN 1;
+    -> END$$

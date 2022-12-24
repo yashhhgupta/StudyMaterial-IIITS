@@ -1,0 +1,4 @@
+ALTER TABLE customer
+ADD FOREIGN KEY (account_number) REFERENCES customer(customer_name);
+
+update customer set account_number = 'A-201' where customer_name = 'Johnson';
