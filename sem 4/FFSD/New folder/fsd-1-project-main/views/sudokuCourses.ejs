@@ -1,0 +1,287 @@
+<!-- Name:- Yash Gupta
+Roll No. S20200010234
+Group No.:- 23 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="/static/cstyle.css" />
+    <link rel="stylesheet" href="/static/footer.css" />
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h2 class="logo">HowToBasic</h2>
+
+        <nav>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/my_courses">Courses</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/logout" style="color:#000">Logout</a></li>
+             <li>
+              <a href="/profile"><img class="pfp" src="/assests/defaultpfp.png" /></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="divimg">
+      <img class="courseImage" src="/assests/sudoku/sudoku.jpg  " />
+      <% if (!user.rsud) { %>
+        <button class="btn" id="rButton" onclick="hide()">Register</button>
+        <% user.rsud = true %> 
+      <% } %>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h1 class="dark-text">Basic Sudoku Course</h1>
+          <ul>
+            <li class="white-text">
+              <span class="fa fa-star checked"></span>  
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              &nbsp;85 votes
+            </li>
+            <h3 class="green-text">Instructors</h3>
+            <ul>
+              <li><img class="inst-img" src="/assests/defaultpfp.png" /></li>
+              <li>
+                <h4 class="white-text">
+                  Saathvika&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </h4>
+              </li>
+              <li><img class="inst-img" src="/assests/defaultpfp.png" /></li>
+              <li><h4 class="white-text">Avinash Bhojnapalli</h4></li>
+            </ul>
+
+            <li><h5 class="white-text">200 already enrolled</h5></li>
+          </ul>
+        </div>
+        <div class="col">
+          <h3 class="green-text">Course Step:-</h3>
+          <table class="table">
+            <tr>
+              <td>
+                <div class="circle2"><br />1</div>
+              </td>
+              <td class="white-text">BASICS</td>
+              <td>
+                <div class="circle"><br />2</div>
+                <td class="white-text">SCANNING TECHNIQUES</td>
+              </td>
+              <td>
+                <div class="circle"><br />3</div>
+                <td class="white-text">ANALYZING TECHNIQUES</td>
+              </td>
+            </tr>
+            
+          </table>
+        </div>
+      </div>
+      <div class="row">
+        <ul>
+              <li><h2 class="green-text">STEP 1 :-&nbsp;&nbsp;</h2></li>
+              <li><h2 class="white-text">BASICS </h2></li>
+              </ul>
+        <table class="table">
+          <tr>
+            <td>
+              <table class="table">
+              <tr><td>
+                <h1 class="white-text">1. RULES</h1>
+              </td></tr>
+              <tr><td>
+              <p class="white-text">1)Each cell can contain numbers from 1-9 only.<br><br>
+2)A row /column should not repeat a number. That is , it should contain the numbers 1-9 only once.<br><br>
+3)A sub-grid which is of size 3x3 also should not repeat a number.
+</p>
+              </td></tr>
+              </table>
+            </td>
+            <td><img class="board" src="/assests/sudoku/1.1.png"></td>
+          </tr>
+          <tr>
+            <td>
+              <a href="/squiz">
+              <button class="bttn1">Take Quiz</button>  
+              </a>
+            </td>
+          </tr>
+        </table>
+          <ul>
+              <li><h2 class="green-text">STEP 2 :-&nbsp;&nbsp;</h2></li>
+              <li><h2 class="white-text">Scanning Techniques </h2></li>
+              </ul>
+        <table class="table">
+          <tr>
+            <td>
+              <table class="table">
+              <tr><td>
+                <h1 class="white-text">1. Scanning in one direction</h1>
+              </td></tr>
+              <tr><td>
+              <p class="white-text">In our first example we will focus on box 2, which like any other box in Sudoku must contain 9. Looking at box 1 and box 3 we can see there are already 9s in row 2 and in row 3, which excludes the two bottom rows of box 2 from having 9. This leaves square e1 as the only possible place into which 9 can fit in.</p>
+              </td></tr>
+              </table>
+            </td>
+            <td><img class="board" src="/assests/sudoku/2.1.png"></td>
+          </tr>
+          <tr>
+            <td>
+              <table class="table">
+              <tr><td>
+                <h1 class="white-text">2. Scanning in two directions</h1>
+              </td></tr>
+              <tr><td>
+              <p class="white-text">The same technique can be expanded by using information from perpendicular rows and columns. Let’s see where we can place 1 in box 3. In this example, row 1 and row 2 contain 1s, which leaves two empty squares in the bottom of box 3. However, square g4 also contains 1, so no additional 1 is allowed in column g. This means that square i3 is the only place left for 1.
+
+ </p>
+              </td></tr>
+              </table>
+            </td>
+            <td><img class="board" src="/assests/sudoku/2.2.png"></td>
+          </tr>
+          <tr>
+            <td>
+              <table class="table">
+              <tr><td>
+                <h1 class="white-text">3. Searching for Single Candidates</h1>
+              </td></tr>
+              <tr><td>
+              <p class="white-text">Often only one number can be in a square because the remaining eight are already used in the relevant row, column and box. Taking a careful look at square b4 we can see that 3, 4, 7 and 8 are already used in the same box, 1 and 6 are used in the same row, and 5 and 9 are used in the same column. Eliminating all the above numbers leaves 2 as the single candidate for square b4. </p>
+              </td></tr>
+              </table>
+            </td>
+            <td><img class="board" src="/assests/sudoku/2.3.png"></td>
+          </tr>
+          <tr>
+            <td>
+              <table class="table">
+              <tr><td>
+                <h1 class="white-text">4. Eliminating numbers from rows, columns and boxes</h1>
+              </td></tr>
+              <tr><td>
+              <p class="white-text"> There are more complex ways to find numbers by using the process of elimination. In this example the 1 in square c8 implies that either square e7 or square e9 must contain 1. Whichever the case may be, the 1 of column e is in box 8 and it is therefore not possible to have 1 in the centre column of box 2. So the only square left for 1 in box 2 is square d2.</p>
+              </td></tr>
+              </table>
+            </td>
+            <td><img class="board" src="/assests/sudoku/2.4.png"></td>
+          </tr>
+          <tr>
+            <td>
+              <table class="table">
+              <tr><td>
+                <h1 class="white-text">4. Searching for missing numbers in rows and columns</h1>
+              </td></tr>
+              <tr><td>
+              <p class="white-text"> This method can be particularly useful when rows (and columns) are close to completion. Let’s take a look at row 6. Seven of the nine squares contain the numbers 1, 2, 3, 4, 5, 8 and 9, which means that 6 and 7 are missing. However, 6 cannot be in square h6 because there is already 6 in that column. Therefore the 6 must be in square b6.</p>
+              </td></tr>
+              </table>
+            </td>
+            <td><img class="board" src="/assests/sudoku/2.5.png"></td>
+          </tr>
+          <tr>
+            <td>
+              <a href="/squiz">
+              <button class="bttn1">Take Quiz</button>  
+              </a>
+            </td>
+          </tr>
+        </table>
+        <ul>
+              <li><h2 class="green-text">STEP 3 :-&nbsp;&nbsp;</h2></li>
+              <li><h2 class="white-text">Analyzing techniques </h2></li>
+              </ul>
+        <table class="table">
+          <tr>
+            <td>
+              <table class="table">
+              <tr><td>
+                <h1 class="white-text">1. Eliminating squares using Naked Pairs in a box</h1>
+              </td></tr>
+              <tr><td>
+              <p class="white-text">In this example, squares c7 and c8 in box 7 can only contain 4 and 9 as shown with the red pencilmarks below. We don’t know which is which, but we do know that both squares are occupied. In addition, square a6 excludes 6 from being in the left column of box 7. As a result the 6 can only be in square b9. Such cases where the same pair can only be placed in two boxes is called Disjoint Subsets, and if the Disjoint Subsets are easy to see then they are called Naked Pairs.</p>
+              </td></tr>
+              </table>
+            </td>
+            <td><img class="board" src="/assests/sudoku/3.1.png"></td>
+          </tr>
+          <tr>
+            <td>
+              <table class="table">
+              <tr><td>
+                <h1 class="white-text">2. Eliminating squares using Naked Pairs in rows and columns</h1>
+              </td></tr>
+              <tr><td>
+              <p class="white-text">TThe previous solving technique is useful for deducing a number within a row or column instead of a box. In this example we see that squares d9 and f9 in box 8 can only contain 2 and 7. Again we don’t know which is which, but we do know that both squares are occupied. The numbers which remain to be placed in row 9 are 1, 6 and 8. However, 6 can’t be placed in square a9 or in square i9, so the only possible place is square c9.
+
+ </p>
+              </td></tr>
+              </table>
+            </td>
+            <td><img class="board" src="/assests/sudoku/3.2.png"></td>
+          </tr>
+          <tr>
+            <td>
+              <table class="table">
+              <tr><td>
+                <h1 class="white-text">3. Eliminating squares using Hidden Pairs in rows and columns</h1>
+              </td></tr>
+              <tr><td>
+              <p class="white-text">Disjoint Subsets are not always obvious to see at first sight, in which case they are called Hidden Pairs. If we take a very close look at the pencilmarks in row 7 we can see that both 1 and 4 can only be in square f7 and square g7. This means that 1 and 4 are a Hidden Pair, and that square f7 and square g7 cannot contain any other number. Using the scanning technique we see that 7 can only be in square d7. </p>
+              </td></tr>
+              </table>
+            </td>
+            <td><img class="board" src="/assests/sudoku/3.3.png"></td>
+          </tr>
+          <tr>
+            <td>
+              <table class="table">
+              <tr><td>
+                <h1 class="white-text">4. Eliminating squares using X-Wing</h1>
+              </td></tr>
+              <tr><td>
+              <p class="white-text"> The X-Wing technique is used in rare situations which occur in some extremely difficult puzzles. Scanning column a we see that 4 can only be in square a2 or square a9. Similarly, 4 can only be in square i2 or square i9. Because of the X-Wing pattern where boxes are in the same row (or column), a new logic constraint occurs: it is obvious that in row 2 the 4 can only be either in square a2 or in square i2, and it cannot be in any other square. Therefore 4 is excluded from square c2, and square c2 must be 2.</p>
+              </td></tr>
+              </table>
+            </td>
+            <td><img class="board" src="/assests/sudoku/3.4.png"></td>
+          </tr>
+          <tr>
+            <td>
+              <a href="/squiz">
+              <button class="bttn1">Take Quiz</button>  
+              </a>
+            </td>
+          </tr>
+        </table>
+
+        
+        
+      </div>
+    </div>
+    <%- include('footer.html'); -%>
+  </body>
+  <script>
+    function hide(){
+   document.getElementById("rButton").style.display = "none";
+  }
+
+  </script>
+</html>

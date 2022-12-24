@@ -1,0 +1,422 @@
+<!-- Name:- Yash Gupta
+Roll No. S20200010234
+Group No.:- 23 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HowToBasic-Chess</title>
+    
+    <link rel="stylesheet" href="/static/cstyle.css" />
+    <link rel="stylesheet" href="/static/footer.css" />
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h2 class="logo">HowToBasic</h2>
+
+        <nav>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/my_courses">Courses</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/logout" style="color:#000">Logout</a></li>
+            <li>
+              <a href="/profile"><img class="pfp" src="/assests/defaultpfp.png" /></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="divimg">
+      <img class="courseImage" src="/assests/chess/chess1.jpg" />
+      
+      <% if (!user.rchess) { %>
+        <button class="btn" id="rButton" onclick="hide()">Register</button>
+        <% user.rchess = true %> 
+      <% } %>
+
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h1 class="dark-text">Basic Chess Course</h1>
+          <ul>
+            <li class="white-text">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              &nbsp;85 votes
+            </li>
+            <h3 class="green-text">Instructors</h3>
+            <ul>
+              <li><img class="inst-img" src="/assests/defaultpfp.png" /></li>
+              <li>
+                <h4 class="white-text">
+                  Yash Gupta&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </h4>
+              </li>
+              <li><img class="inst-img" src="/assests/defaultpfp.png" /></li>
+              <li><h4 class="white-text">Avinash Bhojnapalli</h4></li>
+            </ul>
+
+            <li><h5 class="white-text">200 already enrolled</h5></li>
+          </ul>
+        </div>
+        <div class="col">
+          <h3 class="green-text">Course Step:-</h3>
+          <table class="table">
+            <tr>
+              <td>
+                <div class="circle2"><br />1</div>
+              </td>
+              <td class="white-text">HOW TO MOVE THE PEICES</td>
+              <td>
+                <div class="circle"><br />2</div>
+                <td class="white-text">ADVANCED RULES</td>
+              </td>
+              <td>
+                <div class="circle"><br />3</div>
+                <td class="white-text">SETUP UP BOARD</td>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="circle"><br />4</div>
+                <td class="white-text">PLAYING A GAME</td>
+              </td>
+              <td>
+                <div class="circle"><br />5</div>
+                <td class="white-text">PLAYING A GAME 2.0</td>
+              </td>
+              <td>
+                <div class="circle"><br />6</div>
+                <td class="white-text">ENDING A GAME</td>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="row">
+        <ul>
+              <li><h2 class="green-text">STEP 1 :-&nbsp;&nbsp;</h2></li>
+              <li><h2 class="white-text">HOW TO MOVE THE PIECES </h2></li>
+              </ul>
+        <table class="table">
+          <tr>
+            <td>
+              <table class="table">
+              <tr><td>
+                <h1 class="white-text">1. KING ♔</h1>
+              </td></tr>
+              <tr><td>
+              <p class="white-text">Chess is won by checkmating - trapping - the king. Although the king is the most important piece, it’s not the most powerful. The king can move to any square that’s directly next to it: up, down, sideways or diagonal.</p>
+              </td></tr>
+              </table>
+            </td>
+            <td><img class="board" src="/assests/chess/king.png"></td>
+          </tr>
+          <tr>
+            <td>
+              <table class="table">
+              <tr><td>
+                <h1 class="white-text">2. QUEEN ♛</h1>
+              </td></tr>
+              <tr><td>
+              <p class="white-text">The queen can move forwards, backward, sideways, and diagonally like a king. However, unlike the king, the queen can move as far as it wants to in each of these directions. </p>
+              </td></tr>
+              </table>
+            </td>
+            <td><img class="board" src="/assests/chess/queen.png"></td>
+          </tr>
+          <tr>
+            <td>
+              <table class="table">
+              <tr><td>
+                <h1 class="white-text">3. ROOK ♜</h1>
+              </td></tr>
+              <tr><td>
+              <p class="white-text">The rook can move forwards, backwards and sideways like a queen. However, unlike the queen, the rook can't move diagonally. </p>
+              </td></tr>
+              </table>
+            </td>
+            <td><img class="board" src="/assests/chess/rook.png"></td>
+          </tr>
+          <tr>
+            <td>
+              <table class="table">
+              <tr><td>
+                <h1 class="white-text">4. BISHOP ♝</h1>
+              </td></tr>
+              <tr><td>
+              <p class="white-text">The bishop can move diagonally like a queen, but not forward, backwards or sideways. Each side starts with two bishops, one on a light square and one on a dark square. </p>
+              </td></tr>
+              </table>
+            </td>
+            <td><img class="board" src="/assests/chess/bishop.png"></td>
+          </tr>
+          <tr>
+            <td>
+              <table class="table">
+              <tr><td>
+                <h1 class="white-text">5. KNIGHT ♞</h1>
+              </td></tr>
+              <tr><td>
+              <p class="white-text">The knight is the only chess piece that doesn't go in a straight line. The knight moves two squares in one direction and then turns and goes one in another direction. </p>
+              </td></tr>
+              </table>
+            </td>
+            <td><img class="board" src="/assests/chess/knight.png"></td>
+          </tr>
+          <tr>
+            <td>
+              <table class="table">
+              <tr><td>
+                <h1 class="white-text">6. PAWN ♙</h1>
+              </td></tr>
+              <tr><td>
+              <p class="white-text">Typically pawns move one square forward each move. However, pawns have a couple of special features. A pawn can advance either one or two squares on its first move. Additionally pawns don't capture the way that they move.  Pawns can only capture a piece that is one square diagonally ahead. Pawns are also the only piece that can only go forward. </p>
+              </td></tr>
+              </table>
+            </td>
+            <td><img class="board" src="/assests/chess/pawn.png"></td>
+          </tr>
+          <tr>
+            <td>
+              <a href="/cquiz">
+              <button class="bttn1">Take Quiz</button>  
+              </a>
+            </td>
+          </tr>
+        </table>
+        </table>
+          <ul>
+              <li><h2 class="green-text">STEP 2 :-&nbsp;&nbsp;</h2></li>
+              <li><h2 class="white-text">ADVANCED RULES </h2></li>
+              </ul>
+        <table class="table">
+          <tr>
+            <td>
+              <table class="table">
+              <tr><td>
+                <h1 class="white-text">PAWN PROMOTION ♙->♛</h1>
+                
+              </td></tr>
+              <tr><td>
+              <p class="white-text">When a pawn reaches the end of the board it promotes, which means it turns into another piece. You can promote to a knight, bishop, rook or queen. Since queens are the most powerful piece, that is by far the most common choice. </p>
+              </td></tr>
+              </table>
+            </td>
+            <td><img class="board" src="/assests/chess/pp.gif"></td>
+          </tr>
+          <tr>
+            <td>
+              <a href="/cquiz">
+              <button class="bttn1">Take Quiz</button>  
+              </a>
+            </td>
+          </tr>
+        </table>
+        </table>
+          <ul>
+              <li><h2 class="green-text">STEP 3 :-&nbsp;&nbsp;</h2></li>
+              <li><h2 class="white-text">SET UP BOARD </h2></li>
+              </ul>
+        <table class="table">
+          <tr>
+            <td>
+              <table class="table">
+              <tr><td>
+                <h1 class="white-text">SETTING UP A BOARD 🏁</h1>
+              </td></tr>
+              <tr><td>
+              <p class="white-text">Now that you know how the pieces move, it's time to set up and start the game. Each player starts with a light square in the lower right hand corner. Rooks are placed in the corners, with knights next to them, followed by bishops. Kings and queens are placed in the center squares of the back rank with the queen on her own color.  All White pawns start on the 2nd rank and all Black pawns start on the 7th rank. </p>
+              </td></tr>
+              </table>
+            </td>
+            <td><img class="board" src="/assests/chess/board.jpeg"></td>
+          </tr>
+          <tr>
+            <td>
+              <a href="/cquiz">
+              <button class="bttn1">Take Quiz</button>  
+              </a>
+            </td>
+          </tr>
+        </table>
+        </table>
+         
+          <ul>
+              <li><h2 class="green-text">STEP 4 :-&nbsp;&nbsp;</h2></li>
+              <li><h2 class="white-text">PLAYING THE GAME </h2></li>
+              </ul>
+        <table class="table">
+          <tr>
+            <td>
+              <table class="table">
+              <tr><td>
+                <h1 class="white-text">LANGUAGE OF CHESS 🏁</h1>
+              </td></tr>
+              <tr><td>
+              <p class="white-text">Every square in chess has a name based on a coordinate system. All files have a letter, from a - h, going from the queen's rook file to the king's rook file. Each rank has a number from the 1st and 2nd rank where White's pieces begin through the 7th and 8th rank where Black's pieces begin. Each piece is notated this way:
+
+King = K.
+Queen = Q.
+Rook = R.
+Bishop = B.
+Knight = N.
+Pawn - no symbol.
+
+You write a move with the letter of the piece followed by the letter and numbers of the square. For example, Kf3 if a king reaches the f3 square, or if you place a pawn on f3 then just f3 because pawns have no symbol. </p>
+              </td></tr>
+              </table>
+            </td>
+            <td><img class="board" src="/assests/chess/board.jpeg"></td>
+          </tr>
+          <tr>
+            <td>
+              <table class="table">
+              <tr><td>
+                <h1 class="white-text">MOVING AND CAPTURING 🏁</h1>
+              </td></tr>
+              <tr><td>
+              <p class="white-text">A great strategy to help win chess games is to capture opposing pieces. Most captures are made the same way that pieces normally move. Remember, that pawns capture one square diagonally, instead of their normal forward move.. </p>
+              </td></tr>
+              </table>
+            </td>
+            <td><img class="board" src="/assests/chess/board.jpeg"></td>
+          </tr>
+          <tr>
+            <td>
+              <a href="/cquiz">
+              <button class="bttn1">Take Quiz</button>  
+              </a>
+            </td>
+          </tr>
+        </table>
+         <ul>
+              <li><h2 class="green-text">STEP 5 :-&nbsp;&nbsp;</h2></li>
+              <li><h2 class="white-text">PLAYING THE GAME 2.0 </h2></li>
+              </ul>
+        <table class="table">
+          <tr>
+            <td>
+              <table class="table">
+              <tr><td>
+                <h1 class="white-text">CHECK 🏁</h1>
+              </td></tr>
+              <tr><td>
+              <p class="white-text">Check means that one side is threatening to capture the opposing king. You never capture the king in chess, so the other side must get out of check. 
+
+To notate a check, you add a "+" to the end of your notation. For example, knight to g6 with a check is notated as Ng6+.. </p>
+              </td></tr>
+              </table>
+            </td>
+            <td><img class="board" src="/assests/chess/board.jpeg"></td>
+          </tr>
+          <tr>
+            <td>
+              <table class="table">
+              <tr><td>
+                <h1 class="white-text">GETTING OUT OF CHECK 🏁</h1>
+              </td></tr>
+              <tr><td>
+              <p class="white-text">When you are in check you must escape check. The ways to get out of check are to move the king, block the check with another piece or to capture the checking piece. </p>
+              </td></tr>
+              </table>
+            </td>
+            <td><img class="board" src="/assests/chess/board.jpeg"></td>
+          </tr>
+          <tr>
+            <td>
+              <a href="/cquiz">
+              <button class="bttn1">Take Quiz</button>  
+              </a>
+            </td>
+          </tr>
+        </table>
+         <ul>
+              <li><h2 class="green-text">STEP 6 :-&nbsp;&nbsp;</h2></li>
+              <li><h2 class="white-text">ENDING THE GAME </h2></li>
+              </ul>
+        <table class="table">
+          <tr>
+            <td>
+              <table class="table">
+              <tr><td>
+                <h1 class="white-text">CHECKMATE 🏁</h1>
+              </td></tr>
+              <tr><td>
+              <p class="white-text">You win when your opponent is in check and cannot escape. That is called checkmate! </p>
+              </td></tr>
+              </table>
+            </td>
+            <td><img class="board" src="/assests/chess/board.jpeg"></td>
+          </tr>
+          <tr>
+            <td>
+              <table class="table">
+              <tr><td>
+                <h1 class="white-text">STALEMATE 🏁</h1>
+              </td></tr>
+              <tr><td>
+              <p class="white-text">Stalemate occurs when there are no possible moves, but neither king is in check. Stalemate is a draw, even if one of the players has many more pieces on the board. 
+
+A good example of stalemate occurs when one side just has a king, which is not in check, but it can't move because any attempted move would be moving into check, </p>
+              </td></tr>
+              </table>
+            </td>
+            <td><img class="board" src="/assests/chess/board.jpeg"></td>
+          </tr>
+          <tr>
+            <td>
+              <table class="table">
+              <tr><td>
+                <h1 class="white-text"> OTHER DRAWS 🏁</h1>
+              </td></tr>
+              <tr><td>
+              <p class="white-text">Not all chess games are won or lost. Sometimes they end in a draw. These are the ways that can happen:
+
+1. Stalemate.
+2. Both players agree to a draw.
+3. If the exact same position has repeated three times, either player can claim a draw. 
+4. If 50 moves have occurred without a pawn move or a capture either player can claim a draw. </p>
+              </td></tr>
+              </table>
+            </td>
+            <td><img class="board" src="/assests/chess/board.jpeg"></td>
+          </tr>
+          <tr>
+            <td>
+              <a href="/cquiz">
+              <button class="bttn1">Take Quiz</button>  
+              </a>
+            </td>
+          </tr>
+        </table>
+
+        
+        
+      </div>
+    </div>
+  </body>
+  <%- include('footer.html'); -%>
+  <script>
+    function hide(){
+   document.getElementById("rButton").style.display = "none";
+  }
+
+  </script>
+</html>

@@ -1,0 +1,71 @@
+<!-- Name:- Yash Gupta
+Roll No. S20200010234
+Group No.:- 23 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      <HowToBasic-Examiner-BasketBall></HowToBasic-Examiner-BasketBall>
+    </title>
+
+    <link rel="stylesheet" href="/static/cstyle.css" />
+    <link rel="stylesheet" href="/static/footer.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+  
+
+    <a
+      href="https://simplestepscode.com/javascript-quiz-tutorial/"
+      target="_blank"
+      ></a
+    >
+    <header>
+      <div class="container">
+        <h2 class="logo">HowToBasic</h2>
+
+        <nav>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/my_courses">Courses</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/logout" style="color: #000">Logout</a></li>
+            <li>
+              <a href="/profile"
+                ><img class="pfp" src="/assests/defaultpfp.png"
+              /></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="divimg">
+      <img class="courseImage" src="/assests/bb/bb.jpg" />
+    </div>
+
+    <div class="container">
+      <h1 class="dark-text" style="font-size : 60px" id="meet">Basic Basketball Course Quiz</h1>
+      <div id="quiz"></div>
+    <button id="submit" class="bttn1">Get Results</button>
+    <div class="white-text "id="results" style="font-size : 40px"></div>
+    <br>
+    <br>
+    <a href="/bbCourses">
+    <button id="goback" class="bttn1" >Go back to Course</button></a>
+    </div>
+    <br>
+    <br>
+    <% user.combb = true %> 
+    <%- include('footer.html'); -%>
+    <script src="/js/quiz.js"></script>
+  </body>
+</html>

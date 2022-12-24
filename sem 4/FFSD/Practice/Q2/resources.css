@@ -1,0 +1,17 @@
+h1 
+{
+    text-align: center;
+}
+table,th,td 
+{
+    border: 1px solid black;
+    width: 100%;
+}
+table.center 
+{
+    margin-left: auto; 
+    margin-right: auto;
+}
+body {
+    background-color: rgb(35, 204, 92);
+}

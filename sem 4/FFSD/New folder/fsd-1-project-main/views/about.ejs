@@ -1,0 +1,160 @@
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/static/about.css">
+  </head>
+<body>
+  <header>
+    <div class="container4">
+      <h2 class="logo">HowToBasic</h2>
+        <nav>
+          <ul>  
+            <li><a href="/" style="color:#000">Home</a></li>
+            <li><a href="/about" style="color:#000">About</a></li>
+            <li><a href="/my_courses" style="color:#000">Courses</a></li>
+            <li><a href="/contact" style="color:#000">Contact</a></li>
+            <% if (state) { %>
+              <li><a href="/logout" style="color:#000">Logout</a></li>
+            <% } %>
+            <% if (!state) { %>
+              <li><a href="/login" style="color:#000">Login</a></li>
+             <li><a href="/signup" style="color:#000">Signup</a></li>
+             <% } %>
+            <li><a href="/profile"><img class="pfp" src="/assests/defaultpfp.png" /></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  <main>
+    <div class="about-section">
+      <center>
+        <div class="subhead">
+         <div>A</div>
+         <div>B</div>
+         <div>O</div>
+         <div>U</div>
+         <div>T</div>
+         <div>U</div>
+         <div>S</div>
+        </div>
+      </center>
+      <p>HowToBasic is site where you can learn about differnet courses in different genres basically these are the micro-courses that you will be learning about.</p>
+      
+    </div>
+    <!-- <center>
+    <div class="subhead">
+     <div>O</div>
+     <div>U</div>
+     <div>R</div>
+     <div>T</div>
+     <div>E</div>
+     <div>A</div>
+     <div>M</div>
+    </div>
+  </center> -->
+  <p id="subhead">our team</p>
+    
+    
+    <div class="container1">
+      <img src="/assests/yash.jpeg"  class="image">
+      <div class="overlay">
+        <div class="text">
+          <h3>CHESS INSTRUCTOR</h3>
+          <P>Started to learn chess from my mother at the age of 6 later became a grandmaster at the age of 16 and won the world chess tournament for 3 consecutive years</P>
+        </div>
+      </div>
+   </div>
+   
+    <div class="container1">
+      <img src="/assests/avinash.jpeg" class="image">
+      <div class="overlay">
+        <div class="text">
+          <h3>GUITAR INSTRUCTOR</h3>
+          <p>Completed masters in music from berklee college of music and has an experience working with tylor swift</p>
+        </div>
+      
+      </div>>
+    </div>
+    
+    <div class="container1">
+      <img src="/assests/saathwika.jpeg"  class="image">
+      <div class="overlay">
+        <div class="text">
+          <h3>SUDOKU INSTRUCTOR</h3>
+          <p>I am fond of numbers from my childhood,completed doctrate form MIT and competed in IMO to win silver medal for india</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container2">
+      <img src="/assests/kalyan.jpeg"  class="image">
+      <div class="overlay">
+        <div class="text">
+          <h3>TENNIS INSTRUCTOR</h3>
+          <p>I was passionate about tennis from the age of 7 years, trained under leander paes, won 10 grandslams around the globe</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container2">
+      <img src="/assests/chetan.jpeg" class="image">
+      <div class="overlay">
+        <div class="text">
+          <h3>BASKETBALL INSTRUCTOR</h3>
+          <p>Represented indian national team in olympics,have experience over 8 years in coaching for specialised shooting worked as shooting coach for goldenstate warriors </p>
+        </div>
+      </div>
+    </div>
+     
+  </main>
+  <hr>
+  <footer>
+        <div class="content">
+          <div class="left box">
+            <div class="upper">
+              <div class="topic">About us</div>
+              <p>HowToBasic is site where you can learn about differnet courses in different genres
+                 basically these are the micro-courses that you will be learning about.</p>
+            </div>
+            <div class="lower">
+              <div class="topic">Contact us</div>
+              <div class="phone">
+                <a href="#"><i class="fas fa-phone-volume"></i>+007 9089 6767</a>
+              </div>
+              <div class="email">
+                <a href="#"><i class="fas fa-envelope"></i>abc@gmail.com</a>
+              </div>
+            </div>
+          </div>
+          <div class="middle box">
+            <div class="topic">Our Services</div>
+            <div><a href="bbCourses.html">Basket Ball</a></div>
+            <div><a href="chessCourses.html">Chess Course</a></div>
+            <div><a href="guitarCourses.html">Guitar Course</a></div>
+            <div><a href="sudokuCourses.html">Sudoku Course</a></div>
+          </div>
+          <div class="right box">
+            <div class="topic">Subscribe us</div>
+            <form action="#">
+              <input type="text" placeholder="Enter email address">
+              <input type="submit" name="" value="Send">
+              <div class="media-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="bottom">
+          <p>Copyright © 2022 <a href="#">FFSD-23</a> All rights reserved</p>
+        </div>
+      </footer>
+
+
+</body>
+
+
+</html>

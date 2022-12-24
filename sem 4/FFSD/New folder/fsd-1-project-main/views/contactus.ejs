@@ -1,0 +1,145 @@
+<!-- Group-no:23
+Roll-no:S20200010237 -->
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png"href="icon2.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HowToBasic</title>
+    <script src="login.js"></script>
+    <link rel="stylesheet" href="static/contactus.css">
+    <link rel="stylesheet" href="static/mainstyles.css">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container4">
+            <h2 class="logo">HowToBasic</h2>
+      
+            <nav>
+              <ul>
+                <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/my_courses">Courses</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <% if (state) { %>
+              <li><a href="/logout" style="color:#000">Logout</a></li>
+            <% } %>
+            <% if (!state) { %>
+              <li><a href="/login" style="color:#000">Login</a></li>
+             <li><a href="/signup" style="color:#000">Signup</a></li>
+             <% } %>
+            <li>
+              <a href="/profile"><img class="pfp" src="/assests/defaultpfp.png" /></a>
+            </li>
+              </ul>
+            </nav>
+          </div>
+    </header>
+    <main class="container3">
+    
+        <link rel="stylesheet" href="contactus.css">
+        <div class="container">
+          <div class="content">
+            <div class="left-side">
+              <div class="address details">
+                <a href="https://goo.gl/maps/zd32jWgT8WG4RrSg9"><i class="fas fa-map-marker-alt"></i></a>
+                <div class="topic">Address</div>
+                <div class="text-one">IIIT Sricity, Tada</div>
+                <div class="text-two">Sricity</div>
+              </div>
+              <div class="phone details">
+                <i class="fas fa-phone-alt"></i>
+                <div class="topic">Phone</div>
+                <div class="text-one">**********</div>
+                <div class="text-two">**********</div>
+              </div>
+              <div class="email details">
+                <a href="mailto:academics.office@iiits.in"><i class="fas fa-envelope"></i></a>
+                <div class="topic">Email</div>
+                <div class="text-one">blank</div>
+                <div class="text-two">blank</div>
+              </div>
+            </div>
+            <div class="right-side">
+              <div class="topic-text">Send us a message</div>
+              <p>If you have any work from me or any types of quries related to my tutorial, you can send me message from here. It's my pleasure to help you.</p>
+            <form action="#">
+              <div class="input-box">
+                <input type="text" placeholder="Enter your name">
+              </div>
+              <div class="input-box">
+                <input type="text" placeholder="Enter your email">
+              </div>
+              <div class="input-box message-box">
+                <input type="text" placeholder="Enter your issue">
+              </div>
+              <div class="button">
+                <input type="button" value="Send Now" >
+              </div>
+              <div class="social">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            </form>
+          </div>
+          </div>
+        </div>
+    </div>
+      </main>
+    <hr>
+      <footer>
+        <div class="content">
+          <div class="left box">
+            <div class="upper">
+              <div class="topic">About us</div>
+              <p>CodingLab is a channel where you can learn HTML,
+              CSS, and also JavaScript along with creative CSS Animations and Effects.</p>
+            </div>
+            <div class="lower">
+              <div class="topic">Contact us</div>
+              <div class="phone">
+                <a href="#"><i class="fas fa-phone-volume"></i>+007 9089 6767</a>
+              </div>
+              <div class="email">
+                <a href="#"><i class="fas fa-envelope"></i>abc@gmail.com</a>
+              </div>
+            </div>
+          </div>
+          <div class="middle box">
+            <div class="topic">Our Services</div>
+            <div><a href="#">Web Design, Development</a></div>
+            <div><a href="#">Web UX Design, Reasearch</a></div>
+            <div><a href="#">Web User Interface Design</a></div>
+            <div><a href="#">Theme Development, Design</a></div>
+            <div><a href="#">Mobile Application Design</a></div>
+            <div><a href="#">Wire raming & Prototyping</a></div>
+          </div>
+          <div class="right box">
+            <div class="topic">Subscribe us</div>
+            <form action="#">
+              <input type="text" placeholder="Enter email address">
+              <input type="submit" name="" value="Send">
+              <div class="media-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="bottom">
+          <p>Copyright © 2022 <a href="#">FFSD-23</a> All rights reserved</p>
+        </div>
+      </footer> 
+</body>
+
+
+</html>
+
+

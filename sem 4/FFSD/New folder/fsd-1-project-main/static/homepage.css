@@ -1,0 +1,567 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+
+body {
+	margin: auto;
+	background: #000;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 800;
+}
+
+.dropbtn {
+  background-color: #444;
+  color: #55d6aa;
+  padding: 5 px;
+  font-size: 10 px;
+  border: none;
+  cursor: pointer;
+  height: 40px;
+  width : 150px;
+  border-radius: 0;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #444;
+  min-width: 150px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #444;
+  color:#55d6aa;
+}
+
+.container {
+	width: 100%;
+  margin-right: 50px ;
+	padding-left: 50px;
+  background: #55d6aa;
+  position:fixed;
+  z-index: 1;
+}
+
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.logo {
+  float: left;
+}
+
+.pfp{
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+
+nav {
+  float: right;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 70px;
+  padding-top: 5px;
+  position: relative;
+}
+
+nav a {
+  color: #444;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: #444;
+  position: absolute;
+  top: 0;
+  width: 0%;
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+
+ul > li {
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* search bar */
+#search {
+  color: #000;
+  font-size: small;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.opt {
+    border: 5px #444;
+    color :#fff;
+    font-size: small;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#category {
+    border: 5px #000;
+    font-size: small;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Contests */
+
+@keyframes tostart {
+  75%{left:0;}
+  95%{left:-300%}
+  98%{left:-300%}
+  99%{left:0;}
+}
+@keyframes tonext {
+  75%{left:0;}
+  95%{left:100%}
+  98%{left:100%}
+  99%{left:0;}
+}
+@keyframes snap {
+  96%{scroll-snap-align: center;}
+  97%{scroll-snap-align: none;}
+  99%{scroll-snap-align: none;}
+  100%{scroll-snap-align: center;}
+}
+
+#contest {
+  max-width:10px;
+  margin-top: 100 px;
+  margin:100 px;
+  padding:100px;
+  min-height: 100px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  scrollbar-color: transparent transparent;
+  scrollbar-width: 0px;
+}
+
+*::-webkit-scrollbar {
+  width: 0;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: transparent;
+  border: none;
+}
+
+* {
+  -ms-overflow-style: none;
+}
+
+.carousel {
+  margin-left:150px;
+  position:relative;
+  padding-top:39%;
+  padding-left:5px;
+  border-radius: 1cm;
+  background-color: #55d6aa;
+  filter: drop-shadow(0 0 100px #0003);
+  perspective: 100px;
+  width: 1000px;
+  top: 100px;
+  bottom:150px;
+  color: #55d6aa;
+}
+
+.carousel__viewport {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  overflow-x: scroll;
+  counter-reset: item;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+.carousel__slide {
+  position: relative;
+  flex: 0 0 90%;
+  width: 90%;
+  counter-increment: item;
+  border-radius: 1cm;
+}
+
+.carousel__slide:nth-child(even) {
+  background-color: #444;
+}
+
+#carousel__slide1 {
+  background-image: url(\assests\guitar.jpg);
+  background-position: 30 px;
+  background-size: 1500px 450px;
+  margin-right: 30px;
+}
+
+#carousel__slide2 {
+  background-image: url(\assests\cube.jpg);
+  background-position: 50 px;
+  background-size: 1140px 450px;
+  margin-right: 30px;
+
+}
+
+#carousel__slide3 {
+  background-image: url('\assests\chess.jpg');
+  background-position: 50 px;
+  background-size: 1150px 450px;
+  margin-right: 30px;
+}
+.carousel__slide:before {
+  content: counter(item);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%,-40%,70px);
+  color: transparent;
+  font-size: 2em;
+}
+
+.carousel__snapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  scroll-snap-align: center;
+}
+
+@media (hover: hover) {
+  .carousel__snapper {
+    animation-name: tonext, snap;
+    animation-timing-function: ease;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+
+  .carousel__slide:last-child .carousel__snapper {
+    animation-name: tostart, snap;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel__snapper {
+    animation-name: none;
+  }
+}
+
+.carousel:hover .carousel__snapper,
+.carousel:focus-within .carousel__snapper {
+  animation-name: none;
+}
+
+.carousel__navigation {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
+
+.carousel__navigation-list,
+.carousel__navigation-item {
+  display: inline;
+}
+
+.carousel__navigation-button {
+  display: inline-block;
+  width: 1.5rem;
+  height: 20px;
+  background-clip: content-box;
+  border-radius: 100%;
+  font-size: 0;
+  transition: transform 0.1s;
+  background-color: #000;
+  padding-top: 10px;
+}
+
+/* Button */
+button {
+  height: 50px;
+  width: 130px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+  text-align: centre;
+  border: 2px solid black;
+  background: #0E1016;
+  color: beige;
+  border-radius: 1.5cm;
+  padding: 3px 10px;  
+  display:inline-block;
+  cursor: pointer;
+}
+
+/* Register button */
+#register a:link,a:visited {
+  background-color: #0E1016;
+  color: beige;
+  text-decoration: none;
+}
+
+#intro {
+  margin-left: 50px;
+  padding-left: 125px;
+  float: middle;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 40px;
+  font-style: italic;
+  color: #55d6aa;
+}
+
+/* Courses */
+.Course {
+  border: 1px;
+  width: 200px;
+  height: 200px;
+  border:2px;
+  border-color: #000;
+  background-color: #ffffff;
+  line-height: 100px;
+  border-radius: 1cm;
+  color:#000;
+  text-align:center;
+  vertical-align: middle;
+}
+
+#my_courses {
+  margin-left: 70px;
+  padding-top: 80px;
+  color: #55d6aa;
+  font-style: italic;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#available_courses {
+  margin-top: 150px;
+  margin-left: 50px;
+  padding-left: 10px;
+  color: #55d6aa;
+  font-style: italic;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#completed_courses {
+  margin-left: 70px;
+  color: #55d6aa;
+  font-style: italic;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/* Flip cards */
+.flip-card {
+  background-color: #0E1016;
+  width: 250px;
+  height: 250px;
+  border-radius: 1cm;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 1cm;
+}
+
+
+.flip-card-front {
+  padding-top: 5px;
+  padding-left: 1px;
+  border:10px;
+  border-color: #0e1016;
+  background-color: #55d6aa;
+  line-height: 100px;
+  border-radius: 1cm;
+  color: #0E1016;
+  text-align:center;
+  vertical-align: middle;
+}
+
+.flip-card-back {
+  padding-top: 25px;
+  text-align: centre;
+  background-color: #55d6aa;
+  color: #0E1016; 
+  transform: rotateY(180deg);
+}
+
+#course_image {
+  width:240px;
+  height:240px; 
+  border-radius: 1cm;
+}
+
+/* Side nav */
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.sidenav a:hover {
+  color: #444;
+}
+.sidenav a {
+  color: #444;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.sidenav a:hover::before {
+  width: 100%;
+}
+
+.sidenav {
+  height: 100%;
+  width: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #55d6aa;
+  overflow-x: hidden;
+  padding-top: 90px; 
+
+}
+
+/* Examiner Dashboard */
+
+#content_examiner_dashboard {
+  padding-top:100px;
+  padding-left: 70px;
+}
+/* EVENTS */
+.agenda {
+  width:800px;
+  margin-left: 40px;
+  font-family: 'Roboto', sans-serif;
+  padding: 20px 20px;
+  color:#000;
+  display: inline-block;
+  background:#55d6aa;
+  border-radius: 1cm;
+}
+
+.date{
+  font-size:20px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin:10px 0 10px;
+  padding: 15px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  font-weight: 500;
+}
+
+.add_button{
+  float:right;
+  font-size: 50px;
+  cursor: pointer;
+  margin:0 0 0 65px;
+  padding: 11px 13px;
+}
+.event_item{
+  margin: 18px 0;
+  cursor: pointer;
+  background-color: #55d6aa;
+  width: 500px;
+}
+
+.event_item:hover{
+  background-color: #0e1016;
+  border-radius: 1cm;
+  color: #55d6aa;
+}
+.event_desc {
+  margin-left:30px;
+  font-size: medium;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  line-height: 25px;
+  border-width: 1px;
+}
+
+/* CAROUSAL */
+#carousel__slide1 {
+  background-image: url('../assests/guitar.jpg');
+  background-position: 30 px;
+  background-size: 1500px 450px;
+  margin-right: 30px;
+}
+
+#carousel__slide2 {
+  background-image: url('../assests/cube.jpg');
+  background-position: 50 px;
+  background-size: 1140px 450px;
+  margin-right: 30px;
+
+}
+
+#carousel__slide3 {
+  background-image: url('../assests/chess.jpg');
+  background-position: 50 px;
+  background-size: 1150px 450px;
+  margin-right: 30px;
+}

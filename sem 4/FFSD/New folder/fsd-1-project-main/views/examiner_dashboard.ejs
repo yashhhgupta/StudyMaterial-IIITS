@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HowToBasic-Examiner-Dashboard</title>
+    <link rel="stylesheet" href="../static\homepage.css">
+    <link rel="stylesheet" href="../static/footer.css">
+</head>
+<body>
+
+    <!-- <div class="sidenav">
+      <a href="my_courses.ejs" ><img src = "\assests\dashboard.jpg" style="height: 50px; width: 50px;"></a>
+      <a href="#"><img src = "\assests\account.jpg" style="height: 50px; width: 50px;"></a>
+      <a href="#"><img src = "\assests\badge_icon.jpg" style="height: 50px; width: 50px;"></a>
+      <a href="#"><img src = "\assests\notification.jpg" style="height: 50px; width: 50px;"></a>
+      <a href="#"><img src = "\assests\agenda.jpg" style="height: 47px; width: 47px;"></a>
+    </div> -->
+    <div id = "main">
+      <div class="container" >
+        <h2 class="logo">HowToBasic</h2>
+        <nav>
+         <ul>
+            <!-- Search bar -->
+            <!-- <li><div id="search">SEARCH :
+               <select name="Category" id="category" style="width: 100px;height: 20px;background-color: #444; color:#fff">
+                 <option value="none" selected id="opt">None</option>
+                 <option value="entertainment" id="opt">Entertainment</option>
+                 <option value="education" id="opt">Education</option>
+                 <option value="puzzles" id="opt">Puzzles</option> 
+               </select></div></li>
+             <li><a href="/" style="color:#000">Home</a></li>
+            <li><a href="/about" style="color:#000">About</a></li>
+            <li><a href="/my_courses" style="color:#000">Courses</a></li>
+            <li><a href="/contact" style="color:#000">Contact</a></li>
+            <li><a href="/login" style="color:#000">Login</a></li>
+             <li><a href="/signup" style="color:#000">Signup</a></li>
+            <li>
+              <a href="/profile"><img class="pfp" src="/assests/defaultpfp.png" /></a>
+            </li> -->
+           </ul>
+        </nav>
+      </div>
+      <div id = "content_examiner_dashboard">
+				<p id = "intro"> Welcome to your Dashboard...</p>
+				<div class = "agenda">
+							<!-- <p class = "add_button" style="float:right">+</p> -->
+							<div class = "date">26th March 2022</div>
+						<div class="event_item">
+							<div class="event_desc">10:30 am<br>Reviewing the basketBall(Batch:S234)</div>
+					</div>
+				</div>
+				<h1>....</h1>
+            <ul>
+               <li>
+                 <div class="flip-card">
+                 <div class="flip-card-inner">
+                     <div class="flip-card-front">
+                       <img src="\assests\chess.jpg" alt="Chess" id = "course_image">
+                     </div>
+                     <div class="flip-card-back">
+                       <h4>HowToBasic</h4>
+                       <h1>Chess</h1>
+                       <button id = "register" ><a href="/chessExaminer">Examine</a></button>
+                     </div>
+                 </div>
+               </div>
+             </li>
+             <li>
+               <div class="flip-card">
+                 <div class="flip-card-inner">
+                     <div class="flip-card-front">
+                       <img src="\assests\basketball.jpg" alt="Basket Ball" id = "course_image">
+                     </div>
+                     <div class="flip-card-back">
+                       <h4>HowToBasic</h4>
+                       <h1>Basket Ball</h1>
+                       <button id = "register" ><a href="/bbExaminer">Examine</a></button>
+                     </div>
+                 </div>
+               </div>
+             </li>
+             <li>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                      <img src="\assests\guitar.jpg" alt="Guitar" id = "course_image">
+                    </div>
+                    <div class="flip-card-back">
+                      <h4>HowToBasic</h4>
+                      <h1>Guitar</h1>
+                      <button id = "register" ><a href="/guitarExaminer">Examine</a></button>
+                    </div>
+                </div>
+              </div>
+            </li>
+             <li>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                      <img src="\assests\sudoku.jpg" alt="Sudoku" id = "course_image">
+                    </div>
+                    <div class="flip-card-back">
+                      <h4>HowToBasic</h4>
+                      <h1>Guitar</h1>
+                      <button id = "register" ><a href="/sudokuExaminer">Examine</a></button>
+                    </div>
+                </div>
+              </div>
+            </li>
+           </ul>
+          </div>
+    	</div>
+      <%- include('footer.html'); -%>
+  </body>
+</html>

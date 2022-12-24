@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello | <%= title%></title>
+</head>
+<body>
+    <nav>
+        <div class="site-title">
+            <a href="/"><h1>Blog-e-Yash</h1></a>
+        </div>
+    <ul>
+        <li><a href="/">Blogs</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/blogs/create">New Blog</a></li>
+    </ul>
+    </nav>
+    <div class="create-blogs content">
+        <form>
+            <label for="title">Blogs Title:</label>
+            <input type="text" id="title" required>
+            <label for="snnipet">Blogs Snippet:</label>
+            <input type="text" id="snippet" required>
+            <label for="body">Blogs Body:</label>
+            <textarea id="body" required></textarea>
+        </form>
+        </div>
+</body>
+</html>

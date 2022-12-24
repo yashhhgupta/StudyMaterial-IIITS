@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+
+
+body {
+	margin: 0;
+	background-color: black;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 1800;
+}
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+header {
+  background: #55d6aa;
+}
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.divimg {
+  position: relative;
+  width: 100%;
+}
+.courseImage {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto; 
+    
+}
+
+.btn{
+  position: absolute ;
+  top: 85%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #55d6aa;
+  color: black;
+  font-size: 28px;
+  padding: 12px 20px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.course-body{
+  margin-left: 50px;
+  float: left;
+}
+.course-body1{
+  margin-right: 20px;
+  float: right;
+  padding-top: 30px;
+  padding-right: 250px;
+
+}
+.circle {
+  height: 50px;
+  width: 50px;
+  border: 10px #55d6aa;
+  background-color: white;
+  border-radius: 50%;
+  margin:auto;
+  text-align: center;
+ 
+}
+.circle2 {
+  height: 50px;
+  width: 50px;
+  background-color: #55d6aa;
+  border-radius: 50%;
+  margin:auto;
+  text-align: center;
+}
+
+.board{
+  height: 300px;
+  width: 300px;
+}
+.table{
+  width:100%
+}
+th, td {
+  padding: 15px;
+  text-align: center;
+  vertical-align: center;
+}
+.inst-img{
+  width :20px;
+}
+.dark-text{
+  color: #04a47b
+}
+.green-text{
+  color:#55d6aa
+}
+.white-text{
+  color: white;
+}
+.checked {
+  color: orange;
+}
+ul > li {
+    display: inline-block;
+    /* You can also add some margins here to make it look prettier */
+}
+.logo {
+  float: left;
+}
+
+.pfp{
+    display: inline-block;
+    margin-left: 20px;
+    padding-top: 10px;
+    position: relative;
+    width: 30px;
+    height: 30px;
+}
+
+nav {
+  float: right;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 70px;
+  padding-top: 5px;
+
+  position: relative;
+}
+
+nav a {
+  color: #444;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: #444;
+
+  position: absolute;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+.bttn1 {
+  
+  background-color: #55d6aa;
+  color: black;
+  font-size: 28px;
+  padding: 12px 20px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+/* .quiz {
+  font-size: 100px;
+} */
+

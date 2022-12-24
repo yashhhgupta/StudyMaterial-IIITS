@@ -1,0 +1,111 @@
+<!-- Name:- Yash Gupta
+Roll No. S20200010234
+Group No.:- 23 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HowToBasic-Examiner-Chess</title>
+
+    <link rel="stylesheet" href="/static/ecstyles.css" />
+    <link rel="stylesheet" href="/static/footer.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h2 class="logo">HowToBasic</h2>
+
+        <nav>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/my_courses">Courses</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/login" style="color:#000">Login</a></li>
+             <li><a href="/signup" style="color:#000">Signup</a></li>
+            <li>
+              <a href="/profile"><img class="pfp" src="/assests/defaultpfp.png" /></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="divimg">
+      <img class="courseImage" src="/assests/chess/chess1.jpg" />
+      <!-- <button class="btn">Register</button> -->
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h1 class="dark-text">Basic Chess Course</h1>
+          <ul>
+            <li class="white-text">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              &nbsp;85 votes
+            </li>
+            <h3 class="green-text">Instructors</h3>
+            <ul>
+              <li><img class="inst-img" src="/assests/defaultpfp.png" /></li>
+              <li>
+                <h4 class="white-text">
+                  Yash Gupta&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </h4>
+              </li>
+              <li><img class="inst-img" src="/assests/defaultpfp.png" /></li>
+              <li><h4 class="white-text">Avinash Bhojnapalli</h4></li>
+            </ul>
+
+            <li><h5 class="white-text" >200 already enrolled</h5></li>
+          </ul>
+        </div>
+        <div class="greenbg">
+            <h1>Next Exam</h1>
+            <table class="table">
+                <tr>
+                <td>
+                    <button class="vcbutton">    
+                    <img class="vcicon" src="/assests/chess/vc.webp"/>
+                    </button>
+                </td>
+                <td>
+                    <h1 style="color: black">03/04/2022<br>3:00PM IST</h1>
+                </td>
+                </tr>
+            </table> 
+            
+        </div>
+
+        <table class="table">
+            <h2 class="white-text">Students enrolled</h2>
+            <tr>
+                <th>Name</th>
+                <th>Student Id</th>                 
+            </tr>
+            <% for( let i = 0; i < data.length; i++ ) { %>
+              <% if (!data[i].rsud) { %>
+                <tr>
+                  <td><%= data[i].username %></td>
+                  <td><%= data[i].email %></td>
+                </tr>
+              <% } %>
+            <% } %>
+        </table>
+
+      </div>
+    </div>
+    <%- include('footer.html'); -%>
+  </body>
+</html>

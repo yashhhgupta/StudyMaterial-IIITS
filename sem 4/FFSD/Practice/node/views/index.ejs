@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello    | <%= title%></title>
+</head>
+<body>
+    <nav>
+        <div class="site-title"> 
+            <a href="/"><h1>Blog-e-Yash</h1></a>
+        </div>
+    <ul>
+        <li><a href="/">Blogs</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/blogs/create">New Blog</a></li>
+    </ul>
+    </nav>
+    <div class="blogs Content">
+            <h1>All Blogs</h1>
+            <% if(blogs.length>0){ %>
+                <% blogs.forEach(blog =>{ %> 
+                    <h3 class="title"><%= blog.title %></h3>
+                    <p class="snippet"><%= blog.snippet %> </p>
+                <% }) %> 
+                <% } %>  
+        </div>
+</body>
+</html>
